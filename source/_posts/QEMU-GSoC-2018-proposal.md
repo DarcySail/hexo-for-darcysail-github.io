@@ -9,8 +9,6 @@ Basic Information
 
 * __Name:__ darcy
 * __IRC nickname:__ darcy
-* __Email:__ 
-* __Telephone number (including international dialling code):__ 
 * __Programming languages (fluent):__ C, C++
 * __Past open source contributions:__
     participating write a open source technical book about 'OpenResty'
@@ -24,6 +22,8 @@ Why you are applying
 There are two reasons for participating in QEMU-GSoC:
 
 First, I'm an virtualization technology enthusiast. During my junior year at college, I've designed and implemented a C programming language based compiler, allowing users to directly convert native C code into a my own designed Stack-Based Instruction Set. Internally, a virtual machine to support byte-code execution is integrated into this compiler. Although this simple virtual machine prototype cannot support the full stack of virtualization technology, it's actually the starting point for my interest in virtualization. Now, I'm pursuing my PH.D degree in University of Chinese Academy of Sciences. And I focus on low-level system software design，including virtualization technologies and AI operating systems, e.g., QEMU, Docker, etc. Thus, I want to utilize QEMU to implement the emulation of Intelligence Chip after I am familiar enough with QEMU.
+
+<!--more-->
 
 First, I am greatly interested in virtualization. When I was a junior, I designed and implemented a compiler that support the subset of C language, the compiler accepted C code as input, and output Stack-based Instruction Set(also designed by myself). A virtual machine was written in order to run this bytecode.  Now, in my point of view, this amateur virtual machine is far from virtualization, but it's actually the starting point for my interest in virtualization.  When I came to University of Chinese Academy of Sciences as a master student, most of tasks assigned to me by my school mentor are about low-level system software. And I want to utilize QEMU to implement the emulation of Intelligence Chip after I am familiar enough with QEMU.
 
