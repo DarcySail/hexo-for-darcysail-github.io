@@ -2,6 +2,8 @@
 title: Using QEMU to implement micro:bit machine type emulation
 date: 2018-04-27 21:01:49
 tags: [QEMU]
+comments: Proposal for 2018 QEMU-GSoC
+copyright: true
 ---
 
 Basic Information
