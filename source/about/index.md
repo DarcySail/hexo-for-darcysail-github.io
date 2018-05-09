@@ -5,7 +5,7 @@ date: 2018-04-28 12:28:52
 
 * __Name:__ Su Hang
 * __IRC nickname:__ darcy
-* __Email:__ darcysail at gmail dot com
+* __Email:__ `echo "ZGFyY3lzYWlsQGdtYWlsLmNvbQo=" | base64 --decode`
 * __Programming languages (fluent):__ C, C++
 * __open source contributions:__
     participating write a open source technical book about 'OpenResty'
