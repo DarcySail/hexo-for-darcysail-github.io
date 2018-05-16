@@ -6,6 +6,8 @@ tags: [QEMU, Translation]
 原文地址：http://blog.vmsplice.net/2011/03/qemu-internals-overall-architecture-and.html
 Author：Stefan Hajnoczi
 Translator：Su Hang
+_本文经原作者Stefan Hajnoczi授权翻译_
+
 
 这是针对开发人员的 QEMU 内部原理探析系列中的第一篇文章。它旨在分享 QEMU 工作原理的知识，并使新贡献者更容易了解 QEMU 代码。
 
