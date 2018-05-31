@@ -15,6 +15,11 @@ comments:
 * PDF 阅读： Evince（测试过所有 `Vim-like` 的阅读器之后，发现或多或少存在问题，Evince 只能算是差强人意的选择）
 * PDF 制作： Neovim + Typora
 * PPT 制作： Neovim + nodePPT
+* Overwall： VPS + Shadowsocks
+* 文件管理： VPS + Git（这里强烈批评坚果云，居然能 24 小时吃掉我 100% 的 CPU 资源，对富文本格式文件解析能力非常差）
+* 文件共享： VPS + Git
+* 终端模拟器： Tilix
+* 键鼠 + 剪贴板共享： Synergy
 
 折腾过很久的 Vim 插件，所走的这些路，应该是大多数被 Vim 哲学所吸引的人都走过的。
 在这里分享 dotfile，以飨后来人。希望或多或少能帮到你。
