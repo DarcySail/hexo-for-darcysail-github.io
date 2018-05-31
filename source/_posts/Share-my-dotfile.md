@@ -18,6 +18,7 @@ comments:
 * Overwall： VPS + Shadowsocks
 * 文件管理： VPS + Git（这里强烈批评坚果云，居然能 24 小时吃掉我 100% 的 CPU 资源，对富文本格式文件解析能力非常差）
 * 文件共享： VPS + Git
+* 下载： VPS + aria2c
 * 终端模拟器： Tilix
 * 键鼠 + 剪贴板共享： Synergy
 
