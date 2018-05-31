@@ -16,18 +16,17 @@ comments:
 * PDF 制作： Neovim + Typora
 * PPT 制作： Neovim + nodePPT
 
-#### To be tested
-* 文件浏览： 的确有 `Vim-like` 的文件系统管理器，但我对此心存疑虑，zsh 组合拳似乎对我已经非常够用了
-
-
 折腾过很久的 Vim 插件，所走的这些路，应该是大多数被 Vim 哲学所吸引的人都走过的。
 在这里分享 dotfile，以飨后来人。希望或多或少能帮到你。
 
-> https://github.com/DarcySail/dotfile
-
 <!--more-->
 
+> https://github.com/DarcySail/dotfile
+
 本仓库会持续更新，除了去掉敏感的隐私内容之外，会尽量与我实际使用的 dotfile 保持一致。
+
+#### To be tested
+* 文件浏览： 的确有 `Vim-like` 的文件系统管理器，但我对此心存疑虑，zsh 组合拳似乎对我已经非常够用了
 
 #### 未来目标
 * 将 dotfile 中的所有英文整理为中文（本博客的定位是创造价值以及帮助后来者，所以会照顾大多数 newcomer）；
