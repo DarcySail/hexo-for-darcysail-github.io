@@ -7,11 +7,11 @@ comments:
 ---
 
 #### 序言
-本文旨在教会对 Linux 稍有基础的同学，以__最简单__的方式在拥有__公网 IP__ Ubuntu
-主机上搭建一个监听 __UDP 53 端口__ __OpenVPN__ 服务器，并配置好 Linux
-client 端，以实现绕过__Portal 认证__的目的。
+本文旨在教会对 Linux 稍有基础的同学，以__最简单__的方式在拥有__公网 IP__ Ubuntu 主机上搭建一个监听 __UDP 53 端口__ __OpenVPN__ 服务器，并配置好 Linux client 端，以实现绕过__Portal 认证__的目的。
 > 加黑的每个关键词要么可以搜出大量相关资料，要么是接下来的步骤的关键。
 > 本文不会告诉你为什么要这么做，上面给出的关键词已经是充足的暗示。
+
+<!--more-->
 
 #### 正文
 1. 使用 ssh 登录你的 Ubuntu 服务器，在命令行中输入：`netstat -anup | grep 53`
@@ -36,10 +36,10 @@ udp6       0      0 ::1:53                  :::*                                
 
     ```bash
     Welcome to this OpenVPN "road warrior" installer!
-    
+
     I need to ask you a few questions before starting the setup.
     You can leave the default options and just press enter if you are ok with them.
-    
+
     First, provide the IPv4 address of the network interface you want OpenVPN
     listening to.
     IP address: XX.XX.XX.XX #此处隐匿的是笔者机器的公网 IP，不用做任何修改，直接回车
@@ -48,10 +48,10 @@ udp6       0      0 ::1:53                  :::*                                
        1) UDP (recommended)
        2) TCP
     Protocol [1-2]: 1
-    
+
     What port do you want OpenVPN listening to?
     Port: 53 #注意此处一定要修改为 53，这是最为关键的一步
-    
+
     Which DNS do you want to use with the VPN?
        1) Current system resolvers
        2) 1.1.1.1
@@ -59,11 +59,11 @@ udp6       0      0 ::1:53                  :::*                                
        4) OpenDNS
        5) Verisign
     DNS [1-5]: 3 #此处修改为 3
-    
+
     Finally, tell me your name for the client certificate.
     Please, use one word only, no special characters.
     Client name: client
-    
+
     Okay, that was all I needed. We are ready to set up your OpenVPN server now.
     Press any key to continue...
     ```
