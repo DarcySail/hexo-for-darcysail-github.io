@@ -39,4 +39,8 @@ clang-7: error: linker command failed with exit code 1 (use -v to see invocation
 Binary file ./libLLVMOrcJIT.so.7svn matches
 ```
 
-使用新的命令`clang++ -g -rdynamic toy.cpp -lLLVMOrcJIT `llvm-config --cxxflags --ldflags --system-libs --libs core mcjit native` -O3 -o toy`编译。问题解决。
+使用新的命令
+```bash
+clang++ -g -rdynamic toy.cpp -lLLVMOrcJIT `llvm-config --cxxflags --ldflags --system-libs --libs core mcjit native` -O3 -o toy
+```
+问题解决。
