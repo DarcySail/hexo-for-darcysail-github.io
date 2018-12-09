@@ -31,7 +31,7 @@ set fileencodings=utf-8,gbk,latin1
 
 这些配置，我当然是有的……扶额……
 
-经检查发现是 .vimrc中的`set binary`在作祟。输入`help binary`查看说明：
+经检查发现是 .vimrc中的`set binary`在作祟。输入`:help binary`查看说明：
 > The 'fileencoding' and 'fileencodings' options will not be used, the file is read without conversion.
 
 binay选项会导致fileencoding 和fileencodings失效，这就是在进行网上大部分的配置之后，仍会失效的原因。

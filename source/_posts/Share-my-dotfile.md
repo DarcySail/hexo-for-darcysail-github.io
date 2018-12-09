@@ -12,7 +12,7 @@ comments:
 身为一个重度 Vim 使用者，我交换了 ESC 键和 Caps Lock 键，使用 zsh 的 `Vi` 模式，并尝试在一切可能的地方使用`Vim-like`的方式来操控机器。
 
 * 网页浏览：Chrome + cVim(Chrome 插件）
-* PDF 阅读： Evince（测试过所有 `Vim-like` 的阅读器之后，发现或多或少存在问题，Evince 只能算是差强人意的选择）
+* PDF 阅读： Evince（测试过所有 `Vim-like` 的阅读器之后，发现或多或少存在问题，Evince 只能算是差强人意的选择） (2018.12.09 更新：配置好 Zathura 后挺好用的）
 * PDF 制作： Neovim + Typora
 * PPT 制作： Neovim + nodePPT
 * Overwall： VPS + Shadowsocks
@@ -28,6 +28,7 @@ comments:
 <!--more-->
 
 > https://github.com/DarcySail/dotfile
+> https://xaizek.github.io/2016-08-13/big-list-of-vim-like-software/
 
 本仓库会持续更新，除了去掉敏感的隐私内容之外，会尽量与我实际使用的 dotfile 保持一致。
 
