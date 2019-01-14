@@ -9,6 +9,7 @@ comments:
 _原文地址：https://windsock.io/explaining-docker-image-ids/_
 _Author：Nigel Brown_
 _Translator：SU Hang_
+_经原作者授权翻译 | Translator authorized by the original author_
 
 当 Docker v1.10 发布时，Docker Engine 处理镜像的方式发生了相当大的变化。虽然这种[新的处理机制](https://blog.docker.com/2016/01/docker-1-10-rc/) 被解释得很清楚，并且对 Docker 的常规使用（除了镜像迁移之外）几乎没有影响，但是有一些 UI 变动还是引起了一些[误解](https://github.com/moby/moby/issues/20131)。那么这种变化是什么，为什么 `docker history` 命令会显示一些镜像层的 ID 为 `<missing>`呢？
 
