@@ -1,5 +1,5 @@
 ---
-title: 深入解析 Docker 镜像机制 -- 为何 Docker 镜像 ID 会显示 missing ?
+title: 深入解析 Docker 镜像机制 -- 为何 Docker 镜像 ID 会显示 missing ?『译』
 copyright: true
 date: 2019-01-09 16:57:40
 tags: [Docker]
@@ -9,7 +9,7 @@ comments:
 _原文地址：https://windsock.io/explaining-docker-image-ids/_
 _Author：Nigel Brown_
 _Translator：SU Hang_
-_经原作者授权翻译 | Translator authorized by the original author_
+_经原作者 Nigel Brown 授权翻译 | Translator authorized by the Nigel Brown_
 
 当 Docker v1.10 发布时，Docker Engine 处理镜像的方式发生了相当大的变化。虽然这种[新的处理机制](https://blog.docker.com/2016/01/docker-1-10-rc/) 被解释得很清楚，并且对 Docker 的常规使用（除了镜像迁移之外）几乎没有影响，但是有一些 UI 变动还是引起了一些[误解](https://github.com/moby/moby/issues/20131)。那么这种变化是什么，为什么 `docker history` 命令会显示一些镜像层的 ID 为 `<missing>`呢？
 
@@ -30,7 +30,6 @@ IMAGE               CREATED             CREATED BY                              
 历史上（在 Docker v1.10 版本之前），每次由于提交操作（译者注：`docker commit`) 而创建新镜像时，就会随机生成一个 256 位 [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) 标识来代表这唯一镜像，通常称为镜像 ID（在 UI 中显示为短 12 位十六进制字符串或长 64 位十六进制字符串）。Docker 将镜像内容存储在名称与镜像 ID 相同的目录中。在该目录内部，包括镜像的配置信息 (configuration object ) 和 镜像 ID 和镜像的父镜像的 ID 和。通过这种方式，Docker 能够为容器构建文件系统，每个镜像依次引用其父镜像内容，直到到达没有父级的基本镜像。每一层镜像也可以用有意义的名称（例如 `my_image:1.0`）标记（可选，不强制），但这通常保留用于叶子镜像。这在下图中描述：
 
 ![Historical_Image](Historical_Image.png)
-
 
 使用 `docker inspect` 命令将输出：
 ```bash
@@ -57,7 +56,6 @@ sha256:fc92eec5cac70b0c324cec2933cd7db1c0eae7c9e2649e42d02e77eb6da0d15f
 现在的 Docker 镜像由一个配置对象 (configuration object) 组成，配置对象中包含了一个有序层级摘要列表，这使得 Docker Engine 能够根据层级摘要而不是父镜像来组装容器的文件系统。镜像 ID 也是一个摘要，是镜像配置对象的 SHA256 哈希值，镜像配置对象涵盖了组成该镜像文件系统的所有"层级"的 hash 摘要。下图描绘了 Docker v1.10 之后镜像和层级之间的关系：
 
 ![Content_Addressable_Image](Content_Addressable_Image.png)
-
 
 为了便于阅读，镜像和镜像的 SHA256 hash 摘要被缩短了。
 
@@ -159,4 +157,3 @@ Status: Downloaded newer image for jbloggs/my_image:latest
 * 为了维护构建缓存，Docker 在本地镜像构建期间会创建中间镜像；
 * 镜像清单会在推送镜像时一并推送到 Docker registry;
 * 镜像清单包含镜像层级的摘要，其中包含压缩的归档差异内容的 SHA256 哈希值；
-
