@@ -21,6 +21,7 @@ IMAGE               CREATED             CREATED BY                              
 1742affe03b5        10 days ago         /bin/sh -c #(nop) CMD ["/bin/bash"]             0 B
 <missing>           10 days ago         /bin/sh -c #(nop) ADD file:5d8521419ad6cfb695   125.1 MB
 ```
+
 #### 前言
 首先交代一些相关背景。docker 镜像是用于创建容器的只读模板，并提供基于多层文件和目录的顺序联合的文件系统，这种[联合文件系统](https://en.wikipedia.org/wiki/Union_mount) 使得 Docker 镜像得以复用。Docker 平台提供了"共享镜像层"这一基本组件，通常使用[写时复制（COW）](https://zh.wikipedia.org/wiki/%E5%AF%AB%E5%85%A5%E6%99%82%E8%A4%87%E8%A3%BD) 机制来实现。在容器运行的生命周期中，如果容器需要从下层的某个只读镜像中修改文件，则在进行更改之前，它会将文件复制到其自己的专用读写层 - 即容器层。
 

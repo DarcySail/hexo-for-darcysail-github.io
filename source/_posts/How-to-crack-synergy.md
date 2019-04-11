@@ -43,7 +43,6 @@ decode 函数并不复杂，就不做分析了。继续跟踪函数逻辑流，�
 
 下附简单的 Crack Pro 版本序列号的代码。读者可以自行编译，但请勿传播。
 
-
 ```cpp
 #include <iostream>
 #include <string>

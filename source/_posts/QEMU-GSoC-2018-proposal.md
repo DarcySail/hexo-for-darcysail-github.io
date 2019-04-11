@@ -47,7 +47,6 @@ What I need to do includes:
 
 Although the architectures are binary instructions upward compatible from Armv6-M to Armv7-M, and most(not all) binary instructions available for the Cortex-M0 can execute without modification on the Cortex-M3.[[4]](#4) [[5]](#5)
 
-
 Normally, when porting from the Cortex-M3 to the Cortex-M0, I need to change the peripheral access code, and update system features like clock speed, sleep modes, and so on. And this part of the code in the qemu architecture basically does not belong to implementiion of CPU (./target/arm), but is the work of the implementation of peripherals (./hw/arm).[[6]](#6)
 
 However, what I need to do is to use QEMU's support for cortex-m3 to implement a "true" virtual CPU rather than just using the existing cortex-m3 to implement the microbit machine functionality.
@@ -111,8 +110,6 @@ The bit-band feature in the Cortex-M3 is not available in the Cortex-M0. If the 
 In general, Cortex-M0 memory access must always be naturally aligned while Cortex-M3 doesn't have this limit. The unsupported features should be trimmed to satisfy Cortex-M0.
 (refered to [[code]](#code2)):
 
-
-
 ### Part II.
 * Implementing a "microbit" machine type.
 * Implementing at least the 5x5 LED display, buttons, and UART.
@@ -140,7 +137,6 @@ static const MemoryRegionOps microbit_rom_ops = {
 ```
 
 There is no big difference between stubbing a device and actually implementing a device, both of them need to allocate a MemoryRegion, and hook the access to them, expect for stubbed device hooked with almost empty functions.
-
 
 ### Part III.
 * Test code.
@@ -177,7 +173,6 @@ In addition, assembly code, which directly controls peripherals, should also be 
 
 Project plan
 ----------
-
 
 __5.15 - 5.22__
 Implementing a micro:bit .hex ROM loader;
@@ -224,4 +219,3 @@ Reference
 * <span id = "9"> [8] https://en.wikipedia.org/wiki/ARM_Cortex-M</span>
 * <span id = "10"> [9] STM32F0xxx Cortex-M0 programming manual</span>
 * <span id = "11"> [10] https://www.qemu.org/2018/02/09/understanding-qemu-devices/</span>
-
