@@ -35,5 +35,8 @@ jobs:
       - name: Clean and generate site
         run: npx hexo clean && npx hexo generate
 
+      - name: Create .nojekyll file
+        run: touch public/.nojekyll
+
       - name: Deploy to GitHub Pages
         run: npx hexo deploy
