@@ -80,11 +80,11 @@ theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
-#deploy:
-#  type: git
-#  type: git@github.com:DarcySail/darcysail.github.io.git
-#  branch: master
-#
+deploy:
+  type: git
+  repo: git@github.com:DarcySail/darcysail.github.io.git
+  branch: master
+
 #-------------------------------------------------------------------------------
 search:
   path: search.xml
